@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Productivity Dashboard</title>
+    <style>
+        body {
+            width: 400px;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .chart-container {
+            height: 200px;
+            margin: 20px 0;
+            position: relative;
+        }
+        .stats-table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+        .stats-table td, .stats-table th {
+            padding: 8px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        .productive { color: #4CAF50; }
+        .unproductive { color: #F44336; }
+    </style>
+</head>
+<body>
+    <h1>Productivity Dashboard</h1>
+    
+    <div class="chart-container">
+        <canvas id="productivityChart"></canvas>
+    </div>
+
+    <div class="stats">
+        <h2>Daily Statistics</h2>
+        <table class="stats-table">
+            <tr>
+                <th>Website</th>
+                <th>Time Spent</th>
+            </tr>
+            <tbody id="siteList"></tbody>
+        </table>
+        <p>Daily Limit: <span id="timeLimit">120</span> minutes</p>
+        <p>Time Remaining: <span id="timeRemaining">120</span> minutes</p>
+    </div>
+
+    <script src="lib/chart.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>

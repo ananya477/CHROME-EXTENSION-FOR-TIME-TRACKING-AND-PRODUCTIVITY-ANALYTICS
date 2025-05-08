@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Productivity Tracker Settings</title>
+    <style>
+        body {
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .settings-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .setting-item {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="settings-container">
+        <h1>Settings</h1>
+        
+        <div class="setting-item">
+            <h3>Daily Time Limits</h3>
+            <label>
+                Unproductive Time Limit (minutes):
+                <input type="number" id="dailyLimit" min="0" value="120">
+            </label>
+        </div>
+
+        <div class="setting-item">
+            <h3>Notifications</h3>
+            <label>
+                <input type="checkbox" id="enableNotifications" checked>
+                Enable notifications
+            </label>
+        </div>
+
+        <div class="setting-item">
+            <h3>Site Blocking</h3>
+            <label>
+                <input type="checkbox" id="enableBlocking" checked>
+                Block sites after limit
+            </label>
+        </div>
+
+        <button id="saveSettings">Save Settings</button>
+    </div>
+    <script src="options.js"></script>
+</body>
+</html>
